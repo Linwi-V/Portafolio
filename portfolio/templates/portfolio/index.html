@@ -8,13 +8,11 @@
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-title">Linwi Vargas Campos</h1>
-            <p class="hero-subtitle">Productor de Videojuegos Indie</p>
+            <p class="hero-subtitle">Productor de Videojuegos Junior</p>
             <p class="hero-description">
-                Hago juegos que visibilizan narrativas silenciadas y creo experiencias 
-                interactivas con propósito. También gestiono equipos remotos internacionales, 
-                diseño sonido para videojuegos y desarrollo herramientas web con Django. 
-                Básicamente, si tiene que ver con crear mundos digitales inclusivos, 
-                probablemente me interesa.
+                Produzco videojuegos indie que visibilizan narrativas silenciadas. También 
+                gestiono equipos distribuidos, prototipeo ideas jugables y desarrollo herramientas 
+                web. Me interesan los proyectos que generan conversación, no solo entretenimiento.
             </p>
             <a href="#contacto" class="btn-hero">Hablemos</a>
         </div>
@@ -29,26 +27,16 @@
             <div class="col-lg-10">
                 <div class="sobre-mi-card">
                     <p class="sobre-mi-text">
-                        Soy realizador audiovisual y productor de videojuegos con experiencia en 
-                        equipos internacionales distribuidos. He trabajado como Associate Producer 
-                        en <strong>Toasted Games</strong> coordinando desarrollo en múltiples zonas 
-                        horarias y como Productor en <strong>ALONE</strong> y <strong>Expropiación Digital</strong>.
-                    </p>
-                    <p class="sobre-mi-text">
-                        Mis proyectos <em>Antes todo esto era campo</em> y <em>La Tirana: El tiempo baila</em> 
-                        han sido seleccionados en <strong>Chile Game Showcase</strong> e <strong>Indie Fest Chile</strong>. 
-                        Me especializo en narrativas territoriales, diseño sonoro y gestión de equipos remotos 
-                        usando herramientas como Notion, Discord y Trello.
+                        Productor y comunicador digital con experiencia en desarrollo de videojuegos, diseño sonoro y 
+                        creación de contenido. He trabajado como Associate Producer y Productor en equipos internacionales 
+                        distribuidos, liderando el desarrollo de demos, seguimiento de tareas y coordinación entre áreas 
+                        técnicas y creativas.
                     </p>
                     <p class="sobre-mi-text">
                         Actualmente estoy en transición hacia desarrollo Full Stack con Python/Django y 
                         profundizando en UI/UX y accesibilidad. Creo que los videojuegos pueden ser más 
                         que entretenimiento: pueden generar reflexión, inclusión y representación para 
                         mujeres, disidencias y comunidades diversas.
-                    </p>
-                    <p class="sobre-mi-text">
-                        También trabajo en comunicación digital para fundaciones que empoderan a mujeres 
-                        y disidencias en áreas como avifauna y medioambiente. Porque todo está conectado.
                     </p>
                 </div>
             </div>
@@ -81,32 +69,40 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="habilidad-categoria">
-                    <h4><i class="bi bi-code-slash"></i> Programación</h4>
-                    {% for skill in habilidades.programacion %}
+                    <h4><i class="bi bi-palette"></i> Front-End</h4>
+                    {% for skill in habilidades.frontend %}
                     <span class="skill-badge">{{ skill }}</span>
                     {% endfor %}
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="habilidad-categoria">
-                    <h4><i class="bi bi-controller"></i> Game Development</h4>
-                    {% for skill in habilidades.gamedev %}
+                    <h4><i class="bi bi-server"></i> Back-End</h4>
+                    {% for skill in habilidades.backend %}
                     <span class="skill-badge">{{ skill }}</span>
                     {% endfor %}
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="habilidad-categoria">
-                    <h4><i class="bi bi-music-note-beamed"></i> Audio</h4>
-                    {% for skill in habilidades.audio %}
+                    <h4><i class="bi bi-controller"></i> Game Producer</h4>
+                    {% for skill in habilidades.gameproducer %}
                     <span class="skill-badge">{{ skill }}</span>
                     {% endfor %}
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="habilidad-categoria">
-                    <h4><i class="bi bi-tools"></i> Herramientas</h4>
-                    {% for skill in habilidades.herramientas %}
+                    <h4><i class="bi bi-film"></i> Audiovisual</h4>
+                    {% for skill in habilidades.audiovisual %}
+                    <span class="skill-badge">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="habilidad-categoria">
+                    <h4><i class="bi bi-diagram-3"></i> Organización & Workflows</h4>
+                    {% for skill in habilidades.organizacion %}
                     <span class="skill-badge">{{ skill }}</span>
                     {% endfor %}
                 </div>
@@ -119,7 +115,7 @@
 <section class="section" id="proyectos">
     <div class="container">
         <h2 class="section-title">Proyectos Web</h2>
-        <p class="text-center text-muted mb-5">Aplicaciones desarrolladas durante el Bootcamp Full Stack Python</p>
+        <p class="text-center mb-5" style="color: var(--texto-claro); font-size: 1.1rem;">Aplicaciones desarrolladas durante el Bootcamp Full Stack Python</p>
         <div class="row g-4">
             {% for proyecto in proyectos_web %}
             <div class="col-md-6 col-lg-4">
@@ -162,7 +158,7 @@
 <section class="section" style="background: rgba(0, 0, 0, 0.2);">
     <div class="container">
         <h2 class="section-title">Proyectos Gamedev</h2>
-        <p class="text-center text-muted mb-5">Videojuegos indie con enfoque en narrativas territoriales e inclusivas</p>
+        <p class="text-center mb-5" style="color: var(--texto-claro); font-size: 1.1rem;">Videojuegos indie con enfoque en narrativas territoriales y disidentes</p>
         <div class="row g-4 justify-content-center">
             {% for proyecto in proyectos_gamedev %}
             <div class="col-md-6 col-lg-4">

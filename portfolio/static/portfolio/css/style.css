@@ -8,7 +8,7 @@
     --morado-claro: #4a2c6b;
     --verde-neon: #00ff88;
     --verde-oscuro: #00cc6a;
-    --texto-claro: #e0e0e0;
+    --texto-claro: #e8e8e8;
     --blanco: #ffffff;
 }
 
@@ -146,6 +146,28 @@ body {
     margin-bottom: 0.5rem;
     text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
     line-height: 1.1;
+    position: relative;
+}
+
+/* Efecto glitch sutil */
+.hero-title::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 #ff00de;
+    top: 0;
+    color: var(--blanco);
+    overflow: hidden;
+    animation: glitch 3s infinite;
+    opacity: 0;
+}
+
+@keyframes glitch {
+    0% { opacity: 0; }
+    2% { opacity: 0.8; clip-path: inset(10% 0 85% 0); }
+    4% { opacity: 0; }
+    98% { opacity: 0; }
+    100% { opacity: 0.8; clip-path: inset(80% 0 10% 0); }
 }
 
 .hero-subtitle {
@@ -160,8 +182,8 @@ body {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 3rem;
-    color: var(--texto-claro);
-    line-height: 1.8;
+    color: #f0f0f0;
+    line-height: 1.9;
 }
 
 .btn-hero {
@@ -250,12 +272,12 @@ body {
 }
 
 .sobre-mi-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.8;
-    color: var(--texto-claro);
+    color: #e8e8e8;
 }
 
-/* ========== SERVICIOS ========== */
+/* ========== SERVICIOS / LO QUE HAGO ========== */
 .servicio-card {
     background: rgba(45, 27, 78, 0.6);
     backdrop-filter: blur(10px);
@@ -265,6 +287,32 @@ body {
     border: 2px solid rgba(0, 255, 136, 0.2);
     transition: all 0.3s ease;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.servicio-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--verde-neon), var(--morado-claro), var(--verde-neon));
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+
+.servicio-card:hover::before {
+    opacity: 0.5;
+    animation: borderGlow 2s infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(90deg); }
 }
 
 .servicio-card:hover {
@@ -276,6 +324,7 @@ body {
 .servicio-icono {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--verde-neon);
     filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5));
 }
 
@@ -306,31 +355,37 @@ body {
 .habilidad-categoria:hover {
     border-color: var(--verde-neon);
     box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+    transform: translateY(-5px);
 }
 
 .habilidad-categoria h4 {
     font-family: 'Orbitron', sans-serif;
     color: var(--verde-neon);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .skill-badge {
     display: inline-block;
     background: rgba(0, 255, 136, 0.1);
     color: var(--verde-neon);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 20px;
-    margin: 0.3rem;
+    margin: 0.4rem;
     font-weight: 600;
     border: 1px solid var(--verde-neon);
     transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .skill-badge:hover {
     background: var(--verde-neon);
     color: var(--morado-oscuro);
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
 }
 
 /* ========== PROYECTOS ========== */
@@ -342,6 +397,26 @@ body {
     border: 2px solid rgba(0, 255, 136, 0.2);
     transition: all 0.3s ease;
     height: 100%;
+    position: relative;
+}
+
+.proyecto-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--verde-neon), var(--morado-claro), var(--verde-neon));
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+
+.proyecto-card:hover::before {
+    opacity: 1;
+    animation: borderGlow 2s infinite;
 }
 
 .proyecto-card:hover {
@@ -494,11 +569,23 @@ body {
         font-size: 1.3rem;
     }
     
+    .hero-description {
+        font-size: 1rem;
+    }
+    
     .section-title {
         font-size: 2rem;
     }
     
     .navbar-brand {
         font-size: 1.3rem;
+    }
+    
+    .servicio-icono {
+        font-size: 3rem;
+    }
+    
+    .proyecto-links {
+        flex-direction: column;
     }
 }

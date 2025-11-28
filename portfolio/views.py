@@ -56,33 +56,73 @@ def index(request):
     
     # Habilidades organizadas por categoría
     habilidades = {
-        'programacion': ['Python', 'Django', 'GDScript', 'JavaScript', 'HTML/CSS', 'PostgreSQL'],
-        'gamedev': ['Godot Engine', 'Game Design', 'Producción', 'Level Design', 'Narrative Design'],
-        'audio': ['Diseño de Sonido', 'Edición de Audio', 'Implementación de SFX', 'Ambientes Sonoros'],
-        'herramientas': ['Notion', 'Discord', 'Trello', 'Git/GitHub', 'Adobe Suite', 'Canva', 'Figma']
+        'frontend': [
+            'HTML',
+            'CSS',
+            'Bootstrap',
+            'JavaScript',
+            'UI/UX',
+            'Diseño Responsivo'
+        ],
+        'backend': [
+            'Python',
+            'Django',
+            'MySQL',
+            'SQLite',
+            'PostgreSQL',
+            'Git/GitHub'
+        ],
+        'gameproducer': [
+            'Producción de Videojuegos',
+            'Godot Engine',
+            'Unity',
+            "Ren'Py",
+            'Documentación de Proyectos',
+            'Trackeo de Equipo',
+            'Gestión de Workflows'
+        ],
+        'audiovisual': [
+            'Creación Sonora',
+            'Sonido Directo',
+            'Dirección de Arte',
+            'Montaje',
+            'Adobe Suite',
+            'Documentales',
+            'Producción Audiovisual'
+
+        ],
+        'organizacion': [
+            'Trello',
+            'Miro',
+            'Notion',
+            'Discord',
+            'Google Workspace',
+            'Canva',
+            'Inglés Intermedio'
+        ]
     }
     
-    # Servicios ofrecidos
+    # Lo que hago - Enfocado en áreas de trabajo, no servicios técnicos
     servicios = [
         {
-            'titulo': 'Producción de Videojuegos',
-            'descripcion': 'Gestión de proyectos indie desde el pitch hasta el lanzamiento. Coordino equipos remotos, manejo cronogramas y me aseguro de que las cosas sucedan.',
+            'titulo': 'Producción de Juegos Indie',
+            'descripcion': 'Coordino proyectos desde el pitch hasta el lanzamiento. Gestiono equipos remotos, organizo workflows y me aseguro de que las cosas avancen sin que el equipo se queme en el intento.',
             'icono': 'bi-controller'
         },
         {
-            'titulo': 'Diseño de Sonido',
-            'descripcion': 'Creación de paisajes sonoros y efectos que hacen que tus juegos suenen tan bien como se ven. Desde ambientes sutiles hasta SFX que dan feedback claro.',
-            'icono': 'bi-soundwave'
+            'titulo': 'Coordinación de Equipos Distribuidos',
+            'descripcion': 'Manejo equipos en múltiples zonas horarias usando Notion, Discord y Trello. Organizo sprints, documentación y comunicación para que todos estén sincronizados.',
+            'icono': 'bi-people'
         },
         {
-            'titulo': 'Desarrollo Web',
-            'descripcion': 'Aplicaciones web con Django para resolver problemas reales. Si necesitas un sistema de gestión, un portafolio o una herramienta custom, hablemos.',
+            'titulo': 'Desarrollo de Herramientas Web',
+            'descripcion': 'Construyo aplicaciones web con Django para resolver problemas reales de producción. Si necesitas un sistema de gestión, pipeline tracker o herramienta custom, lo hacemos.',
             'icono': 'bi-code-slash'
         },
         {
-            'titulo': 'Narrativa y Diseño Inclusivo',
-            'descripcion': 'Narrativas que visibilizan identidades diversas y diseño con enfoque en accesibilidad. Porque los juegos son para todes.',
-            'icono': 'bi-people'
+            'titulo': 'Diseño de Experiencias Inclusivas',
+            'descripcion': 'Creo narrativas que visibilizan identidades diversas y diseño con enfoque en accesibilidad. Los juegos son un medio político y deben representar a todes.',
+            'icono': 'bi-heart'
         }
     ]
     
