@@ -120,9 +120,6 @@
             {% for proyecto in proyectos_web %}
             <div class="col-md-6 col-lg-4">
                 <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/400x250/2d1b4e/00ff88?text={{ proyecto.titulo|urlencode }}" 
-                         alt="{{ proyecto.titulo }}" 
-                         class="proyecto-imagen">
                     <div class="proyecto-contenido">
                         <h3 class="proyecto-titulo">{{ proyecto.titulo }}</h3>
                         <span class="proyecto-tipo">{{ proyecto.tipo }}</span>
@@ -163,9 +160,6 @@
             {% for proyecto in proyectos_gamedev %}
             <div class="col-md-6 col-lg-4">
                 <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/400x250/1a0933/00ff88?text={{ proyecto.titulo|urlencode }}" 
-                         alt="{{ proyecto.titulo }}" 
-                         class="proyecto-imagen">
                     <div class="proyecto-contenido">
                         <h3 class="proyecto-titulo">{{ proyecto.titulo }}</h3>
                         <span class="proyecto-tipo">{{ proyecto.tipo }}</span>

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def index(request):
-    # Proyectos Web - Bootcamp Full Stack Python
+    # Proyectos Web 
     proyectos_web = [
         {
             'titulo': 'Game Production Manager',
@@ -32,7 +32,7 @@ def index(request):
         },
     ]
     
-    # Proyectos Gamedev - Videojuegos Indie
+    # Proyectos Gamedev 
     proyectos_gamedev = [
         {
             'titulo': 'Antes todo esto era campo',
@@ -54,7 +54,7 @@ def index(request):
         },
     ]
     
-    # Habilidades organizadas por categoría
+    # Habilidades 
     habilidades = {
         'frontend': [
             'HTML',
@@ -73,22 +73,18 @@ def index(request):
             'Git/GitHub'
         ],
         'gameproducer': [
-            'Producción de Videojuegos',
-            'Godot Engine',
             'Unity',
             "Ren'Py",
+            'Trabajo en Equipo',
+            'Godot',
             'Documentación de Proyectos',
-            'Trackeo de Equipo',
-            'Gestión de Workflows'
         ],
         'audiovisual': [
             'Creación Sonora',
-            'Sonido Directo',
             'Dirección de Arte',
             'Montaje',
             'Adobe Suite',
-            'Documentales',
-            'Producción Audiovisual'
+            'Documentales'
 
         ],
         'organizacion': [
@@ -102,21 +98,21 @@ def index(request):
         ]
     }
     
-    # Lo que hago - Enfocado en áreas de trabajo, no servicios técnicos
+    # Lo que hago 
     servicios = [
         {
             'titulo': 'Producción de Juegos Indie',
-            'descripcion': 'Coordino proyectos desde el pitch hasta el lanzamiento. Gestiono equipos remotos, organizo workflows y me aseguro de que las cosas avancen sin que el equipo se queme en el intento.',
+            'descripcion': 'Coordino proyectos desde la idea hasta el lanzamiento y más allá. Gestiono equipos remotos, organizo workflows y me aseguro de que las cosas avancen sin que el equipo se queme en el intento',
             'icono': 'bi-controller'
         },
         {
             'titulo': 'Coordinación de Equipos Distribuidos',
-            'descripcion': 'Manejo equipos en múltiples zonas horarias usando Notion, Discord y Trello. Organizo sprints, documentación y comunicación para que todos estén sincronizados.',
+            'descripcion': 'Manejo equipos en múltiples zonas horarias. Organizo sprints, documentación y comunicación para que todxs estén sincronizados.',
             'icono': 'bi-people'
         },
         {
             'titulo': 'Desarrollo de Herramientas Web',
-            'descripcion': 'Construyo aplicaciones web con Django para resolver problemas reales de producción. Si necesitas un sistema de gestión, pipeline tracker o herramienta custom, lo hacemos.',
+            'descripcion': 'Construyo aplicaciones web con Django para resolver problemas reales. Si necesitas un sistema de gestión, pipeline tracker o herramienta custom, lo hacemos.',
             'icono': 'bi-code-slash'
         },
         {
