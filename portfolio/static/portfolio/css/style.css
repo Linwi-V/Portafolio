@@ -487,6 +487,7 @@ body {
 }
 
 .footer-title {
+    text-align: center;
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     color: var(--verde-neon);
@@ -495,6 +496,8 @@ body {
 
 .footer-subtitle {
     margin-bottom: 2rem;
+    text-align: center;
+
 }
 
 .social-links {
@@ -502,12 +505,14 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    
 }
 
 .social-link {
     font-size: 2rem;
     color: var(--texto-claro);
     transition: .3s ease;
+    
 }
 
 .social-link:hover {
@@ -520,7 +525,11 @@ body {
     padding-top: 1rem;
     margin-top: 2rem;
     font-size: .9rem;
+    text-align: center;
+
 }
+
+
 
 /* ========== RESPONSIVO ========== */
 @media (max-width: 768px) {

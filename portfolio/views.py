@@ -13,7 +13,7 @@ def index(request):
             'imagen': 'img/gpm.jpg'
         },
         {
-            'titulo': 'Gestor de Tareas',
+            'titulo': 'Gestor de Tareas con sesiones',
             'descripcion': 'Sistema de gestión de tareas con autenticación completa. Cada usuario puede crear, visualizar y gestionar sus tareas personales de forma privada.',
             'tipo': 'Web App',
             'tecnologias': ['Django', 'Python', 'Bootstrap', 'Autenticación'],
@@ -36,19 +36,17 @@ def index(request):
     proyectos_gamedev = [
         {
             'titulo': 'Antes todo esto era campo',
-            'descripcion': 'Videojuego que invita a reflexionar sobre el extractivismo y el territorio. Selección oficial en Chile Game Showcase e Indie Fest Chile.',
+            'descripcion': 'En un pueblo donde las leyendas dictan la realidad, unx joven tiene la opción de desaprender prejuicios para enfrentar corporaciones extractivistas que manejan todo desde las sombras.',
             'tipo': 'Videojuego',
-            'tecnologias': ['Godot', 'GDScript', 'Diseño Sonoro', 'Pixel Art'],
-            'link_github': 'https://github.com/Linwi-V',
+            'tecnologias': ['Renpy', 'Novela Visual'],
             'link_demo': 'https://antestodoestoeracampo.itch.io/ateec',
             'imagen': 'img/ateec.jpg'
         },
         {
             'titulo': 'La Tirana: El tiempo baila',
-            'descripcion': '2.5D RPG sobre identidad y territorio chileno. Desarrollado con Expropiación Digital. Selección oficial en Chile Game Showcase e Indie Fest Chile.',
+            'descripcion': 'Katari descubre que su abuelo es un guardián del tiempo-espacio. Cuando es secuestrado, ella debe atravesar épocas y lugares para recuperar objetos robados y detener a un enemigo ancestral.',
             'tipo': 'Videojuego',
-            'tecnologias': ['Godot', 'GDScript', 'Pixel Art', 'Sound Design'],
-            'link_github': 'https://github.com/Linwi-V',
+            'tecnologias': ['Godot', 'Pixel Art', '2.5D', 'RPG'],
             'link_demo': '#',
             'imagen': 'img/latirana.jpg'
         },
@@ -93,6 +91,7 @@ def index(request):
             'Notion',
             'Discord',
             'Google Workspace',
+            'RRSS',
             'Canva',
             'Inglés Intermedio'
         ]
@@ -101,34 +100,34 @@ def index(request):
     # Lo que hago 
     servicios = [
         {
-            'titulo': 'Producción de Juegos Indie',
-            'descripcion': 'Coordino proyectos desde la idea hasta el lanzamiento y más allá. Gestiono equipos remotos, organizo workflows y me aseguro de que las cosas avancen sin que el equipo se queme en el intento',
+            'titulo': 'Producción de Videojuegos',
+            'descripcion': 'Coordino proyectos desde la idea inicial hasta el lanzamiento y mas allá. Organizo personas y me aseguro de que las cosas avancen sin que el equipo se queme en el intento.',
             'icono': 'bi-controller'
         },
         {
-            'titulo': 'Coordinación de Equipos Distribuidos',
-            'descripcion': 'Manejo equipos en múltiples zonas horarias. Organizo sprints, documentación y comunicación para que todxs estén sincronizados.',
-            'icono': 'bi-people'
-        },
-        {
-            'titulo': 'Desarrollo de Herramientas Web',
-            'descripcion': 'Construyo aplicaciones web con Django para resolver problemas reales. Si necesitas un sistema de gestión, pipeline tracker o herramienta custom, lo hacemos.',
+            'titulo': 'Desarrollo Web',
+            'descripcion': 'Diseño y construyo aplicaciones web con Python y Django. Desde sistemas de gestión hasta herramientas custom que resuelven problemas reales, especial enfoque en la parte frontend.',
             'icono': 'bi-code-slash'
         },
         {
-            'titulo': 'Diseño de Experiencias Inclusivas',
-            'descripcion': 'Creo narrativas que visibilizan identidades diversas y diseño con enfoque en accesibilidad. Los juegos son un medio político y deben representar a todes.',
-            'icono': 'bi-heart'
+            'titulo': 'Gestión de Proyectos',
+            'descripcion': 'Organizo equipos de manera remota. Diseño pipelines de trabajo, documentación y comunicación para mantener proyectos vivos y sincronizados.',
+            'icono': 'bi-diagram-3'
+        },
+        {
+            'titulo': 'Realización Audiovisual',
+            'descripcion': 'Me especializo en creación sonora, montaje y dirección de arte. Me motiva particularmente el cine documental y los videoclips. Tambien creo contenido para redes sociales y canales de YouTube.',
+            'icono': 'bi-film'
         }
     ]
     
     # Información de contacto
     contacto = {
-        'email': 'tu-email@ejemplo.com',  # Cambia por tu email real
+        'email': 'linwi.vargas@gmail.com',  
         'github': 'https://github.com/Linwi-V',
         'linkedin': 'https://www.linkedin.com/in/linwi-vargas-campos/',
-        'itch': 'https://antestodoestoeracampo.itch.io/ateec',
-        'behance': 'https://www.behance.net/linwivargas'
+        'itch': 'https://linwi.itch.io/',
+        'behance': 'https://www.behance.net/linwi1'
     }
     
     context = {

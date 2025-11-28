@@ -10,9 +10,10 @@
             <h1 class="hero-title">Linwi Vargas Campos</h1>
             <p class="hero-subtitle">Productor de Videojuegos Junior</p>
             <p class="hero-description">
-                Produzco videojuegos indie que visibilizan narrativas silenciadas. También 
-                gestiono equipos distribuidos, prototipeo ideas jugables y desarrollo herramientas 
-                web. Me interesan los proyectos que generan conversación, no solo entretenimiento.
+                Produzco videojuegos indie que buscan visibilizar narrativas históricamente silenciadas. 
+                Gestiono equipos y proyectos, prototipeo ideas jugables y actualmente me estoy 
+                especializando en desarrollo web Full Stack con Python. Me interesan los proyectos 
+                que generan conversación y reflexión, además de entretenimiento.
             </p>
             <a href="#contacto" class="btn-hero">Hablemos</a>
         </div>
@@ -27,16 +28,17 @@
             <div class="col-lg-10">
                 <div class="sobre-mi-card">
                     <p class="sobre-mi-text">
-                        Productor y comunicador digital con experiencia en desarrollo de videojuegos, diseño sonoro y 
+                        Productor en formación y realizador audiovisual con experiencia en desarrollo de videojuegos, diseño sonoro y 
                         creación de contenido. He trabajado como Associate Producer y Productor en equipos internacionales 
-                        distribuidos, liderando el desarrollo de demos, seguimiento de tareas y coordinación entre áreas 
+                        distribuidos en varios continentes, liderando el desarrollo de demos, seguimiento de tareas y coordinación entre áreas 
                         técnicas y creativas.
                     </p>
                     <p class="sobre-mi-text">
                         Actualmente estoy en transición hacia desarrollo Full Stack con Python/Django y 
                         profundizando en UI/UX y accesibilidad. Creo que los videojuegos pueden ser más 
                         que entretenimiento: pueden generar reflexión, inclusión y representación para 
-                        mujeres, disidencias y comunidades diversas.
+                        mujeres, disidencias y comunidades marginalizadas. Mi objetivo es crear 
+                        experiencias significativas que conecten con las personas a un nivel más profundo.
                     </p>
                 </div>
             </div>
@@ -170,9 +172,6 @@
                             {% endfor %}
                         </div>
                         <div class="proyecto-links">
-                            <a href="{{ proyecto.link_github }}" target="_blank" class="btn-proyecto btn-github">
-                                <i class="bi bi-github"></i> GitHub
-                            </a>
                             {% if proyecto.link_demo != '#' %}
                             <a href="{{ proyecto.link_demo }}" target="_blank" class="btn-proyecto btn-demo">
                                 <i class="bi bi-joystick"></i> Jugar
