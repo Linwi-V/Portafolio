@@ -1,0 +1,204 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section" id="inicio">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Linwi Vargas Campos</h1>
+            <p class="hero-subtitle">Productor de Videojuegos Indie</p>
+            <p class="hero-description">
+                Hago juegos que visibilizan narrativas silenciadas y creo experiencias 
+                interactivas con propósito. También gestiono equipos remotos internacionales, 
+                diseño sonido para videojuegos y desarrollo herramientas web con Django. 
+                Básicamente, si tiene que ver con crear mundos digitales inclusivos, 
+                probablemente me interesa.
+            </p>
+            <a href="#contacto" class="btn-hero">Hablemos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sobre mí -->
+<section class="section" id="sobre-mi">
+    <div class="container">
+        <h2 class="section-title">Un poco más sobre mí</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="sobre-mi-card">
+                    <p class="sobre-mi-text">
+                        Soy realizador audiovisual y productor de videojuegos con experiencia en 
+                        equipos internacionales distribuidos. He trabajado como Associate Producer 
+                        en <strong>Toasted Games</strong> coordinando desarrollo en múltiples zonas 
+                        horarias y como Productor en <strong>ALONE</strong> y <strong>Expropiación Digital</strong>.
+                    </p>
+                    <p class="sobre-mi-text">
+                        Mis proyectos <em>Antes todo esto era campo</em> y <em>La Tirana: El tiempo baila</em> 
+                        han sido seleccionados en <strong>Chile Game Showcase</strong> e <strong>Indie Fest Chile</strong>. 
+                        Me especializo en narrativas territoriales, diseño sonoro y gestión de equipos remotos 
+                        usando herramientas como Notion, Discord y Trello.
+                    </p>
+                    <p class="sobre-mi-text">
+                        Actualmente estoy en transición hacia desarrollo Full Stack con Python/Django y 
+                        profundizando en UI/UX y accesibilidad. Creo que los videojuegos pueden ser más 
+                        que entretenimiento: pueden generar reflexión, inclusión y representación para 
+                        mujeres, disidencias y comunidades diversas.
+                    </p>
+                    <p class="sobre-mi-text">
+                        También trabajo en comunicación digital para fundaciones que empoderan a mujeres 
+                        y disidencias en áreas como avifauna y medioambiente. Porque todo está conectado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios -->
+<section class="section" id="servicios">
+    <div class="container">
+        <h2 class="section-title">Lo que hago</h2>
+        <div class="row g-4">
+            {% for servicio in servicios %}
+            <div class="col-md-6 col-lg-3">
+                <div class="servicio-card">
+                    <div class="servicio-icono"><i class="{{ servicio.icono }}"></i></div>
+                    <h3 class="servicio-titulo">{{ servicio.titulo }}</h3>
+                    <p class="servicio-descripcion">{{ servicio.descripcion }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Habilidades -->
+<section class="section" id="habilidades">
+    <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="habilidad-categoria">
+                    <h4><i class="bi bi-code-slash"></i> Programación</h4>
+                    {% for skill in habilidades.programacion %}
+                    <span class="skill-badge">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="habilidad-categoria">
+                    <h4><i class="bi bi-controller"></i> Game Development</h4>
+                    {% for skill in habilidades.gamedev %}
+                    <span class="skill-badge">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="habilidad-categoria">
+                    <h4><i class="bi bi-music-note-beamed"></i> Audio</h4>
+                    {% for skill in habilidades.audio %}
+                    <span class="skill-badge">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="habilidad-categoria">
+                    <h4><i class="bi bi-tools"></i> Herramientas</h4>
+                    {% for skill in habilidades.herramientas %}
+                    <span class="skill-badge">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Proyectos Web -->
+<section class="section" id="proyectos">
+    <div class="container">
+        <h2 class="section-title">Proyectos Web</h2>
+        <p class="text-center text-muted mb-5">Aplicaciones desarrolladas durante el Bootcamp Full Stack Python</p>
+        <div class="row g-4">
+            {% for proyecto in proyectos_web %}
+            <div class="col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <img src="https://via.placeholder.com/400x250/2d1b4e/00ff88?text={{ proyecto.titulo|urlencode }}" 
+                         alt="{{ proyecto.titulo }}" 
+                         class="proyecto-imagen">
+                    <div class="proyecto-contenido">
+                        <h3 class="proyecto-titulo">{{ proyecto.titulo }}</h3>
+                        <span class="proyecto-tipo">{{ proyecto.tipo }}</span>
+                        <p class="proyecto-descripcion">{{ proyecto.descripcion }}</p>
+                        <div class="mb-3">
+                            {% for tech in proyecto.tecnologias %}
+                            <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="{{ proyecto.link_github }}" target="_blank" class="btn-proyecto btn-github">
+                                <i class="bi bi-github"></i> Código
+                            </a>
+                            {% if proyecto.link_demo != '#' %}
+                            <a href="{{ proyecto.link_demo }}" target="_blank" class="btn-proyecto btn-demo">
+                                <i class="bi bi-box-arrow-up-right"></i> Demo
+                            </a>
+                            {% else %}
+                            <span class="btn-proyecto btn-demo" style="opacity: 0.5; cursor: not-allowed;">
+                                <i class="bi bi-hourglass-split"></i> Pronto
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Proyectos Gamedev -->
+<section class="section" style="background: rgba(0, 0, 0, 0.2);">
+    <div class="container">
+        <h2 class="section-title">Proyectos Gamedev</h2>
+        <p class="text-center text-muted mb-5">Videojuegos indie con enfoque en narrativas territoriales e inclusivas</p>
+        <div class="row g-4 justify-content-center">
+            {% for proyecto in proyectos_gamedev %}
+            <div class="col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <img src="https://via.placeholder.com/400x250/1a0933/00ff88?text={{ proyecto.titulo|urlencode }}" 
+                         alt="{{ proyecto.titulo }}" 
+                         class="proyecto-imagen">
+                    <div class="proyecto-contenido">
+                        <h3 class="proyecto-titulo">{{ proyecto.titulo }}</h3>
+                        <span class="proyecto-tipo">{{ proyecto.tipo }}</span>
+                        <p class="proyecto-descripcion">{{ proyecto.descripcion }}</p>
+                        <div class="mb-3">
+                            {% for tech in proyecto.tecnologias %}
+                            <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="{{ proyecto.link_github }}" target="_blank" class="btn-proyecto btn-github">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                            {% if proyecto.link_demo != '#' %}
+                            <a href="{{ proyecto.link_demo }}" target="_blank" class="btn-proyecto btn-demo">
+                                <i class="bi bi-joystick"></i> Jugar
+                            </a>
+                            {% else %}
+                            <span class="btn-proyecto btn-demo" style="opacity: 0.5; cursor: not-allowed;">
+                                <i class="bi bi-hourglass-split"></i> En desarrollo
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
