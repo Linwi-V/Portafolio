@@ -9,8 +9,7 @@ def index(request):
             'tipo': 'Web App',
             'tecnologias': ['Django', 'Python', 'PostgreSQL', 'Bootstrap'],
             'link_github': 'https://github.com/Linwi-V/GameProductionManager',
-            'link_demo': '#',
-            'imagen': 'img/gpm.jpg'
+            'link_demo': 'https://game-production-manager.onrender.com',
         },
         {
             'titulo': 'Gestor de Tareas con sesiones',
@@ -19,7 +18,6 @@ def index(request):
             'tecnologias': ['Django', 'Python', 'Bootstrap', 'Autenticación'],
             'link_github': 'https://github.com/Linwi-V/Evaluacion_PortafolioM6',
             'link_demo': '#',
-            'imagen': 'img/gestor-tareas.jpg'
         },
         {
             'titulo': 'Gestor de Productos',
@@ -28,7 +26,6 @@ def index(request):
             'tecnologias': ['Django', 'PostgreSQL', 'Bootstrap', 'CRUD'],
             'link_github': 'https://github.com/Linwi-V/Evaluacion_Modulo7',
             'link_demo': '#',
-            'imagen': 'img/gestor-productos.jpg'
         },
     ]
     
@@ -40,7 +37,6 @@ def index(request):
             'tipo': 'Videojuego',
             'tecnologias': ['Renpy', 'Novela Visual'],
             'link_demo': 'https://antestodoestoeracampo.itch.io/ateec',
-            'imagen': 'img/ateec.jpg'
         },
         {
             'titulo': 'La Tirana: El tiempo baila',
@@ -48,7 +44,6 @@ def index(request):
             'tipo': 'Videojuego',
             'tecnologias': ['Godot', 'Pixel Art', '2.5D', 'RPG'],
             'link_demo': '#',
-            'imagen': 'img/latirana.jpg'
         },
     ]
     
