@@ -7,7 +7,7 @@ def index(request):
             'titulo': 'Game Production Manager',
             'descripcion': 'Sistema web para gestión de producción de videojuegos indie. Incluye seguimiento de tareas, cronogramas y coordinación de equipos remotos.',
             'tipo': 'Web App',
-            'tecnologias': ['Django', 'Python', 'PostgreSQL', 'Bootstrap'],
+            'tecnologias': ['Django', 'Python', 'MySQL', 'Bootstrap'],
             'link_github': 'https://github.com/Linwi-V/GameProductionManager',
             'link_demo': 'https://game-production-manager.onrender.com',
         },
